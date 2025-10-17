@@ -1,16 +1,17 @@
 {
- :paths ["src" "resources"]
- :deps  {
-         dev.weavejester/hashp {:mvn/version "0.4.0"}
-         }
+ :paths   ["src" "resources"]
+ :deps    {
+           dev.weavejester/hashp     {:mvn/version "0.4.0"}
+           org.clojure/tools.logging {:mvn/version "1.3.0"}
+           }
  :aliases {
- :test  {:extra-paths ["test"]
-         :jvm-opts    []
-         :extra-deps  {
-                       dev.weavejester/hashp {:mvn/version "0.4.0"}
-                       lambdaisland/kaocha {:mvn/version "1.91.1392"}
-                       }
-         :main-opts   ["-m" "kaocha.runner"]
-         }
- }
+           :test {:extra-paths ["test"]
+                  :jvm-opts    []
+                  :extra-deps  {
+                                dev.weavejester/hashp {:mvn/version "0.4.0"}
+                                lambdaisland/kaocha   {:mvn/version "1.91.1392"}
+                                }
+                  :main-opts   ["-m" "kaocha.runner"]
+                  }
+           }
  }
